@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HBDYWI Beta Feedback</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Review the HBDYWI reader funnel beta, screen by screen.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 14c-2.6-1.8-3.4-5-2-8.5 1.2.6 2 1.4 2 1.4s.8-.8 2-1.4c1.4 3.5.6 6.7-2 8.5Z' fill='%23b4566e'/%3E%3Cpath d='M16 29V15' stroke='%232f3a2f' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+:root{--paper:#f6f1ea;--paper-2:#efe6da;--card:#fffdf9;--ink:#23201c;--ink-2:#5a524a;--muted:#8a8077;--line:#e2d8cb;--forest:#2f3a2f;--bloom:#b4566e;--bloom-soft:#f3dfe3;--ok:#3f7a52;--warn:#a5622a;
+  --serif:"Fraunces",Georgia,serif;--sans:"DM Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;--r:18px;--shadow:0 1px 2px rgba(35,32,28,.05),0 12px 32px -14px rgba(35,32,28,.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#171512;--paper-2:#1f1c18;--card:#24201b;--ink:#f2ebe2;--ink-2:#cfc4b7;--muted:#9d9286;--line:#3a342d;--forest:#c9d6c4;--bloom:#e08ea2;--bloom-soft:#3b2328;--shadow:0 12px 32px -14px rgba(0,0,0,.6)}}
+:root[data-theme=dark]{--paper:#171512;--paper-2:#1f1c18;--card:#24201b;--ink:#f2ebe2;--ink-2:#cfc4b7;--muted:#9d9286;--line:#3a342d;--forest:#c9d6c4;--bloom:#e08ea2;--bloom-soft:#3b2328}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 28px}}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.015em;margin:0 0 .4em}
+h1{font-size:clamp(2.2rem,6.5vw,3.8rem)} h1 em{color:var(--bloom)}
+h2{font-size:clamp(1.6rem,4vw,2.2rem)} h3{font-size:1.15rem;font-family:var(--sans);font-weight:700;letter-spacing:0}
+a{color:var(--bloom);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--bloom);outline-offset:3px;border-radius:6px}
+.eyebrow{font:700 .75rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--bloom);display:block;margin-bottom:12px}
+.muted{color:var(--muted)} .small{font-size:.88rem}
+header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:14px;height:58px}
+.brand{font-family:var(--serif);font-size:1.1rem;white-space:nowrap}
+.prog{flex:1;height:8px;background:var(--paper-2);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--bloom);border-radius:99px;transition:width .4s}
+.prog-label{font-size:.82rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;border:1.5px solid var(--forest);background:var(--forest);color:var(--paper);font:600 .98rem/1.1 var(--sans);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--forest)} .btn.bloom{background:var(--bloom);border-color:var(--bloom);color:#fff} .btn.sm{min-height:38px;padding:7px 14px;font-size:.88rem}
+.btn[aria-busy=true]{opacity:.6;pointer-events:none}
+.intro{padding:44px 0 26px}
+.how{display:grid;gap:12px;margin:24px 0}
+@media(min-width:720px){.how{grid-template-columns:repeat(3,1fr)}}
+.how div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.how b{display:block;margin-bottom:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px;box-shadow:var(--shadow);margin:0 0 22px}
+@media(min-width:720px){.card{padding:30px}}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:6px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--forest);color:var(--paper);display:grid;place-items:center;font-weight:700}
+.num.done{background:var(--ok)}
+.sec-head p{margin:2px 0 0;color:var(--ink-2)}
+.views{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 10px}
+.views button{border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 14px;font:600 .85rem var(--sans);color:var(--ink-2);cursor:pointer}
+.views button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.shot-wrap{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper-2)}
+.shot-scroll{max-height:560px;overflow:auto;-webkit-overflow-scrolling:touch}
+.shot-scroll.phone{max-width:340px;margin:0 auto}
+.shot{position:relative;cursor:crosshair;line-height:0}
+.shot img{width:100%;height:auto;display:block;user-select:none;-webkit-user-drag:none}
+.pin{position:absolute;transform:translate(-50%,-100%);width:30px;height:30px;border-radius:50% 50% 50% 0;rotate:-45deg;background:var(--bloom);border:2px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.35);display:grid;place-items:center;cursor:pointer;padding:0}
+.pin span{rotate:45deg;color:#fff;font:700 .78rem var(--sans);line-height:1}
+.shot-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);background:var(--card)}
+.pins{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.pins li{display:flex;gap:8px;align-items:flex-start}
+.pins .tag{flex:none;width:28px;height:28px;border-radius:50%;background:var(--bloom);color:#fff;display:grid;place-items:center;font:700 .78rem var(--sans);margin-top:9px}
+.pins textarea{min-height:46px}
+.pins .x{flex:none;border:0;background:transparent;color:var(--muted);font-size:1.4rem;cursor:pointer;width:40px;height:44px}
+.react{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.react label{flex:1;min-width:120px;margin:0}
+.react input{position:absolute;opacity:0}
+.react span{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);cursor:pointer;font-weight:600;font-size:.95rem}
+.react input:checked+span{border-color:var(--bloom);background:var(--bloom-soft);color:var(--bloom)}
+.react input:focus-visible+span{outline:3px solid var(--bloom);outline-offset:2px}
+label.l{display:block;font-weight:600;font-size:.93rem;margin:16px 0 6px}
+label.l .opt{font-weight:400;color:var(--muted)}
+textarea,input[type=text],input[type=email],input[type=url],select{width:100%;padding:11px 14px;font:400 1rem/1.45 var(--sans);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px}
+textarea{min-height:84px;resize:vertical}
+textarea:focus,input:focus,select:focus{border-color:var(--bloom);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--bloom) 22%,transparent)}
+.two{display:grid;gap:0 16px} @media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+.rewrite{background:var(--paper-2);border-radius:14px;padding:4px 16px 16px;margin-top:18px}
+.rewrite .cur{font-size:.82rem;color:var(--muted);margin:2px 0 0}
+.checks{display:grid;gap:8px;margin-top:6px} @media(min-width:640px){.checks{grid-template-columns:1fr 1fr}}
+.checks label{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;cursor:pointer;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper)}
+.checks input{width:19px;height:19px;accent-color:var(--bloom);margin-top:2px;flex:none}
+.checks label:has(input:checked){border-color:var(--bloom);background:var(--bloom-soft)}
+.swatches{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.sw{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--ink-2)} .sw i{width:30px;height:30px;border-radius:50%;border:1px solid var(--line)}
+.scale{display:flex;gap:6px;flex-wrap:wrap}
+.scale label{margin:0} .scale input{position:absolute;opacity:0}
+.scale span{display:grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);cursor:pointer;font-weight:700}
+.scale input:checked+span{background:var(--bloom);color:#fff;border-color:var(--bloom)}
+.scale input:focus-visible+span{outline:3px solid var(--bloom);outline-offset:2px}
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(20,16,14,.88);display:none;overflow:auto;padding:56px 12px 24px}
+.lightbox.open{display:block}
+.lightbox img{display:block;margin:0 auto;max-width:min(1440px,100%);height:auto;border-radius:8px}
+.lightbox button{position:fixed;top:10px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:1.5rem;cursor:pointer}
+.msg{border-radius:12px;padding:14px 16px;margin-top:14px;font-size:.95rem} .msg:empty{display:none}
+.msg.ok{background:color-mix(in srgb,var(--ok) 14%,var(--card));color:var(--ok)} .msg.err{background:color-mix(in srgb,var(--warn) 14%,var(--card));color:var(--warn)}
+.saved{font-size:.8rem;color:var(--muted)}
+.toc{display:flex;gap:6px;overflow-x:auto;padding:4px 0 14px;scrollbar-width:none}
+.toc a{flex:none;text-decoration:none;font-size:.82rem;font-weight:600;color:var(--ink-2);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px}
+.toc a.done{border-color:var(--ok);color:var(--ok)}
+.finish{text-align:center}
+footer{padding:30px 0 60px;color:var(--muted);font-size:.85rem;text-align:center}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">HBDYWI beta review</span>
+  <div class="prog" role="progressbar" aria-label="Review progress" aria-valuemin="0" aria-valuemax="100"><i id="bar"></i></div>
+  <span class="prog-label" id="prog-label">0 of 13</span>
+</div></header>
+
+<main class="wrap" id="main">
+  <section class="intro">
+    <span class="eyebrow">Your reader funnel · beta review</span>
+    <h1>Tell us what you <em>love</em>, and what to change.</h1>
+    <p style="font-size:1.12rem;color:var(--ink-2);max-width:40em">Below is every screen of the HBDYWI site and the emails your readers will receive. Go section by section, react, and leave notes right on the pictures. Rough thoughts are perfect. Nothing here is final.</p>
+    <p><a class="btn bloom" href="https://trueyxl.github.io/hbdywi-funnel/" target="_blank" rel="noopener">Open the live beta in a new tab ↗</a></p>
+    <div class="how">
+      <div><b>📍 Tap a screenshot</b><span class="small muted">Drops a numbered pin right where you tapped. Type your note for that exact spot.</span></div>
+      <div><b>💬 React + comment</b><span class="small muted">Pick how you feel, then share what you like and what you'd change.</span></div>
+      <div><b>✏️ Rewrite the words</b><span class="small muted">Edit the text boxes to say it in your voice. We'll use your version.</span></div>
+    </div>
+    <div class="card" style="margin-top:8px">
+      <div class="two">
+        <div><label class="l" for="name">Your name</label><input type="text" id="name" data-k="reviewer_name" autocomplete="name" placeholder="e.g. Imani Green"></div>
+        <div><label class="l" for="email">Your email <span class="opt">(so we can follow up)</span></label><input type="email" id="email" data-k="reviewer_email" autocomplete="email"></div>
+      </div>
+      <p class="saved" style="margin:12px 0 0">Your answers save automatically on this device. Come back anytime and pick up where you left off.</p>
+    </div>
+    <nav class="toc" id="toc" aria-label="Sections"></nav>
+  </section>
+
+  <div id="sections"></div>
+
+  <section class="card finish" id="send">
+    <h2>Ready to send?</h2>
+    <p class="muted" id="send-summary">Send everything you've written so far. You can send again later with more.</p>
+    <button class="btn bloom" type="button" id="submit">Send my feedback</button>
+    <div class="msg" id="send-msg" aria-live="polite"></div>
+    <p class="small" style="margin-top:16px"><a href="#" id="download">Download a copy of my answers</a> · <a href="#" id="clear">Start over</a></p>
+  </section>
+</main>
+<footer>Built for Imani Green · The Bloom Project · WeUnfolded</footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Full-size screenshot"><button type="button" aria-label="Close">×</button><img alt=""></div>
+
+<script>
+(() => {
+const SEND_TO = 'noriodeobaro@gmail.com';
+const LIVE = 'https://trueyxl.github.io/hbdywi-funnel/';
+const KEY = 'hbdywi_feedback_v1';
+
+// ---------------------------------------------------------------- content
+const S = [
+  { id: 'hero', title: 'First impression: the top of the homepage', what: 'The first thing anyone sees from an ad, email or social link.', live: '',
+    shots: [['Desktop', 'd-hero'], ['Phone', 'm-hero', 1]],
+    rewrite: [['Small line above the title', 'Imani Green · Volume One'], ['Main headline', 'HBDYWI — you were never meant to walk it alone.'], ['Sentence under the headline', 'A guided journey through Volume One. Read it, live it, and share it with your people.'], ['Main button', 'Join the free Activation'], ['Second button', 'Buy Volume One']],
+    q: [['first_feel', 'In three words, how does this make you feel?', 'text']] },
+  { id: 'paths', title: 'The four pathways', what: 'Readers pick how they want to start: free session, buy the book, paid cohort, or start a group.', live: '#paths-h',
+    shots: [['Desktop', 'd-paths']],
+    rewrite: [['Free Activation card', 'Pick a live date, register in seconds and get your Zoom access and reminders.'], ['Buy Volume One card', 'Get the book on Amazon in paperback or Kindle.'], ['Guided Cohort card', 'Go through the book live with Imani and a small group. The book is purchased separately.'], ['Start Your Own Group card', 'Invite your people. When 5 join, you unlock a free virtual author visit.']],
+    q: [['path_order', 'Is this the right order? Which pathway matters most to you?', 'text']] },
+  { id: 'activation', title: 'Free 45-Minute Activation sign-up', what: 'Pick a date, enter name + email, and get the Zoom link instantly plus reminders 48h, 24h and 1h before.', live: '#activation',
+    shots: [['Desktop', 'd-activation'], ['Email: confirmation', 'e-activation_confirm'], ['Email: next steps after', 'e-activation_next_steps']],
+    rewrite: [['Section title', 'The 45-Minute Activation'], ['Description', 'A live, guided session to help you begin with clarity. Same session, offered twice a month, so pick the date that fits.'], ['Button', 'Reserve my free seat']],
+    q: [['act_schedule', 'Proposed schedule: 2nd and 4th Wednesdays at 5:00 PM Pacific. Does that work?', 'choice', ['Yes, perfect', 'Different days/times (explain below)', 'Not sure yet']], ['act_schedule_note', 'Preferred days, times or seat limit', 'text']] },
+  { id: 'book', title: 'Buy the book + the "Don\'t do it alone" invitation', what: 'Buttons open Amazon in a new tab. At the same moment a small invitation slides in on the site offering the cohort or a group, without blocking Amazon.', live: '#book',
+    shots: [['Book section', 'd-book'], ['Invitation after clicking Amazon', 'd-amazon-sheet']],
+    rewrite: [['Invitation headline', "Don't do the journey alone."], ['Invitation sentence', 'Reading is good. Reading it with people changes everything.']],
+    q: [['formats', 'Which formats are on Amazon?', 'checks', ['Paperback', 'Kindle / eBook', 'Hardcover', 'Audiobook']]] },
+  { id: 'cohort', title: 'The $72 Guided Cohort', what: 'Readers pick a cohort and pay securely with Stripe. When a cohort is full or closed, a waitlist appears instead.', live: '#cohort',
+    shots: [['Cohort checkout', 'd-cohort'], ['When closed: waitlist', 'd-waitlist'], ['After paying', 'd-cohort-success'], ['Email: payment confirmed', 'e-cohort_paid']],
+    rewrite: [['Section title', 'The Guided Cohort'], ['Description', 'Walk through Volume One together, live with Imani and a small group of readers.'], ["What's included (one per line)", 'Live Zoom meetings + digital workbook\nReminders before every meeting\nSecure checkout with Stripe\nThe book is a separate purchase on Amazon']],
+    q: [['cohort_details', 'Cohort length, meeting day/time, max seats, first start date', 'text']] },
+  { id: 'groups', title: 'Start-your-own-group explainer', what: 'Explains that gathering 5 people unlocks a free 30-minute virtual visit with Imani.', live: '#groups',
+    shots: [['Desktop', 'd-groups']],
+    rewrite: [['Section title', 'Start your own reading group'], ['Description', 'Book club, church small group, friends, coworkers: any size works. Gather 5 people through your invite link and your group unlocks a free 30-minute virtual visit with Imani.']],
+    q: [['group_word', 'What should we call these groups?', 'choice', ['Reading group', 'Book club', 'Circle', 'Bloom group', 'Other (say below)']], ['group_word_other', 'Other name / notes', 'text']] },
+  { id: 'startgroup', title: 'Group leader registration form', what: 'The leader enters name, email, group name, dates and meeting schedule, then instantly gets a unique invite link.', live: 'start-group',
+    shots: [['Desktop', 'd-start-group'], ['Email: group created', 'e-group_created']],
+    q: [['leader_fields', 'Any question to add or remove from this form?', 'text']] },
+  { id: 'join', title: 'Member sign-up (from the invite link)', what: 'Short phone-friendly form: name, email, "Have you bought Volume One?" and an optional, unticked updates box.', live: 'join?c=',
+    shots: [['Phone', 'm-join', 1], ['Desktop', 'd-join'], ['Email: member confirmation', 'e-member_confirm']],
+    rewrite: [['Page headline', 'Join {group name}'], ['Button', 'Join the group']] },
+  { id: 'dashboard', title: "The group leader's dashboard", what: 'Private page showing member count, who has the book, and when the author visit unlocks.', live: 'group?t=',
+    shots: [['Before 5 members', 'd-dashboard-locked'], ['Unlocked at 5', 'd-dashboard-unlocked'], ['Phone', 'm-dashboard', 1], ['Email: milestone', 'e-group_milestone'], ['Email: visit unlocked', 'e-group_eligible']],
+    q: [['dash_more', 'Anything a leader should also see here?', 'text']] },
+  { id: 'visit', title: 'Booking the virtual author visit', what: 'Leaders pick from your open times only, shown in their own time zone. It confirms instantly and goes on your calendar. One visit per group; rescheduling allowed.', live: 'visit?t=',
+    shots: [['Desktop', 'd-visit'], ['Phone', 'm-visit', 1], ['Email: visit confirmed', 'e-visit_confirm']],
+    q: [['visit_avail', 'Placeholder availability: Mon–Thu, 10 AM–4 PM Pacific, 48h notice, max 3 visits a week. What should it really be?', 'text'], ['visit_calendar', 'Which calendar do you use?', 'choice', ['Google Calendar', 'Outlook / Microsoft', 'Apple iCloud', 'Other']]] },
+  { id: 'emails', title: 'The emails overall', what: 'Readers get confirmations, reminders and next steps automatically. You saw them in each section; here is the overall picture.', live: '',
+    shots: [['Activation', 'e-activation_confirm'], ['Next steps', 'e-activation_next_steps'], ['Cohort paid', 'e-cohort_paid'], ['Group created', 'e-group_created'], ['Milestone', 'e-group_milestone'], ['Unlocked', 'e-group_eligible'], ['Member', 'e-member_confirm'], ['Visit booked', 'e-visit_confirm']],
+    q: [['email_sender', 'Sender name and reply-to email readers should see', 'text'], ['email_tone', 'Tone of the emails', 'choice', ['Just right', 'Warmer / more personal', 'More faith-centered', 'Shorter', 'More professional']]] },
+  { id: 'look', title: 'Overall look, colours and feel', what: 'The colours, fonts and style across the whole site. Placeholder brand until your colours and photos arrive.', live: '', look: true,
+    q: [['look_colors', 'The colours', 'choice', ['Love them, keep them', 'Close, but adjust', 'Use my brand colours instead']], ['look_brand_colors', 'Your brand colours (names or hex codes) / fonts you like', 'text'], ['look_inspo', 'Websites you love the feel of (links)', 'text']] },
+  { id: 'extras', title: 'Anything to add?', what: "Features and content you'd like on the site. Tick anything that sounds good.", live: '', extras: true,
+    q: [['extras_list', 'Add to the site', 'checks', ['Photos of me (author)', 'Short welcome video', 'Reader testimonials', 'FAQ section', 'Book excerpt / first chapter', 'The Bloom Project page', 'Events / speaking page', 'Podcast or media page', 'Merch or other products', 'French or Spanish version']],
+      ['extras_other', 'Anything else to add, remove or change?', 'long'], ['top3', 'Your top 3 priorities before launch', 'long'], ['files_link', 'Link to files (cover, photos, logo, workbook) on Drive/Dropbox', 'url'],
+      ['overall', 'Overall, how ready does this feel? (1 = far, 10 = ready to launch)', 'scale'], ['launch_date', 'Target launch date', 'text']] },
+];
+
+// ---------------------------------------------------------------- state
+let state = {}; try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch {}
+state.pins ||= {};
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} progress(); };
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+// ---------------------------------------------------------------- render
+const box = $('#sections');
+box.innerHTML = S.map((s, i) => {
+  const n = i + 1, k = (x) => `${s.id}__${x}`;
+  const shotsHtml = s.shots ? `
+    ${s.shots.length > 1 ? `<div class="views" role="group" aria-label="Choose screenshot">${s.shots.map(([label], j) => `<button type="button" data-sec="${s.id}" data-view="${j}" aria-pressed="${j === 0}">${esc(label)}</button>`).join('')}</div>` : '<div style="height:14px"></div>'}
+    <div class="shot-wrap"><div class="shot-scroll" data-scroll="${s.id}"></div>
+      <div class="shot-bar"><span>📍 Tap the picture to pin a note</span><span><button class="btn sm ghost" type="button" data-zoom="${s.id}">🔍 Full size</button>${s.live !== '' ? ` <a class="btn sm ghost" target="_blank" rel="noopener" href="${LIVE}${s.live.startsWith('#') ? s.live.replace('-h', '').replace('#paths', '') : s.live.includes('?') ? '' : s.live}">Open live ↗</a>` : ''}</span></div></div>
+    <ul class="pins" data-pins="${s.id}"></ul>` : '';
+  const lookHtml = s.look ? `<div class="swatches">${[['#f6f1ea', 'Paper'], ['#2f3a2f', 'Forest'], ['#b4566e', 'Bloom pink'], ['#8c3c53', 'Wine'], ['#c9a45c', 'Gold'], ['#23201c', 'Ink']].map(([c, l]) => `<span class="sw"><i style="background:${c}"></i>${l}</span>`).join('')}</div>
+    <p class="small muted">Fonts: <span style="font-family:var(--serif);font-size:1.1rem">Fraunces (headlines)</span> + <span style="font-weight:600">DM Sans (text)</span>. The site also has a dark mode for phones set to dark.</p>
+    <div class="views">${['d-hero', 'd-groups', 'm-hero'].map((x, j) => `<button type="button" data-sec="look" data-view="${j}" aria-pressed="${j === 0}">${['Homepage', 'Section style', 'Phone'][j]}</button>`).join('')}</div>
+    <div class="shot-wrap"><div class="shot-scroll" data-scroll="look"></div><div class="shot-bar"><span>📍 Tap the picture to pin a note</span><button class="btn sm ghost" type="button" data-zoom="look">🔍 Full size</button></div></div><ul class="pins" data-pins="look"></ul>` : '';
+  const react = s.extras ? '' : `<div class="react" role="radiogroup" aria-label="Your reaction">${[['love', '😍 Love it'], ['good', '🙂 Good'], ['work', '🤔 Needs work'], ['no', '👎 Don\'t like']].map(([v, l]) => `<label><input type="radio" name="${k('reaction')}" value="${v}" data-k="${k('reaction')}"><span>${l}</span></label>`).join('')}</div>
+    <div class="two"><div><label class="l" for="${k('like')}">What do you like?</label><textarea id="${k('like')}" data-k="${k('like')}"></textarea></div>
+    <div><label class="l" for="${k('change')}">What would you change or remove?</label><textarea id="${k('change')}" data-k="${k('change')}"></textarea></div></div>`;
+  const qs = (s.q || []).map(([qk, label, type, opts]) => {
+    const id = k(qk);
+    if (type === 'choice') return `<label class="l">${esc(label)}</label><div class="checks">${opts.map((o) => `<label><input type="radio" name="${id}" value="${esc(o)}" data-k="${id}">${esc(o)}</label>`).join('')}</div>`;
+    if (type === 'checks') return `<label class="l">${esc(label)}</label><div class="checks">${opts.map((o) => `<label><input type="checkbox" value="${esc(o)}" data-k="${id}" data-multi>${esc(o)}</label>`).join('')}</div>`;
+    if (type === 'scale') return `<label class="l">${esc(label)}</label><div class="scale" role="radiogroup" aria-label="${esc(label)}">${Array.from({ length: 10 }, (_, j) => `<label><input type="radio" name="${id}" value="${j + 1}" data-k="${id}"><span>${j + 1}</span></label>`).join('')}</div>`;
+    if (type === 'url') return `<label class="l" for="${id}">${esc(label)}</label><input type="url" id="${id}" data-k="${id}" placeholder="https://">`;
+    return `<label class="l" for="${id}">${esc(label)}</label><textarea id="${id}" data-k="${id}" ${type === 'text' ? 'style="min-height:60px"' : ''}></textarea>`;
+  }).join('');
+  const rw = s.rewrite ? `<div class="rewrite"><label class="l" style="margin-top:14px">✏️ Rewrite the words <span class="opt">(edit any box; leave it if it's fine)</span></label>${s.rewrite.map(([label, cur], j) => `<label class="l" for="${k('rw' + j)}" style="margin-top:12px">${esc(label)}</label><textarea id="${k('rw' + j)}" data-k="${k('rw' + j)}" data-orig="${esc(cur)}" style="min-height:${cur.length > 90 || cur.includes('\n') ? 96 : 52}px">${esc(cur)}</textarea>`).join('')}</div>` : '';
+  return `<section class="card" id="s-${s.id}" aria-labelledby="h-${s.id}">
+    <div class="sec-head"><span class="num" id="n-${s.id}">${n}</span><div><h2 id="h-${s.id}" style="font-size:clamp(1.3rem,3.4vw,1.75rem)">${esc(s.title)}</h2><p>${esc(s.what)}</p></div></div>
+    ${shotsHtml}${lookHtml}${react}${qs}${rw}</section>`;
+}).join('');
+$('#toc').innerHTML = S.map((s, i) => `<a href="#s-${s.id}" data-toc="${s.id}">${i + 1}. ${esc(s.title.split(/[:+(]/)[0].replace(/^The /, '').trim())}</a>`).join('');
+
+// ---------------------------------------------------------------- screenshots + pins
+const SHOTS = Object.fromEntries(S.filter((s) => s.shots).map((s) => [s.id, s.shots]));
+SHOTS.look = [['Homepage', 'd-hero'], ['Section style', 'd-groups'], ['Phone', 'm-hero', 1]];
+const view = {};
+function showShot(sec, j = view[sec] || 0) {
+  view[sec] = j;
+  const [label, file, phone] = SHOTS[sec][j];
+  const sc = $(`[data-scroll="${sec}"]`);
+  sc.classList.toggle('phone', !!phone);
+  sc.innerHTML = `<div class="shot" data-shot="${file}" data-sec="${sec}"><img src="shots/${file}.jpg" alt="${esc(label)} screenshot" loading="lazy" draggable="false"></div>`;
+  sc.scrollTop = 0;
+  drawPins(sec);
+  $$(`[data-sec="${sec}"][data-view]`).forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.view === j)));
+}
+function pinsFor(sec) { return state.pins[sec] ||= []; }
+function drawPins(sec) {
+  const list = pinsFor(sec), file = SHOTS[sec][view[sec] || 0][1];
+  const shot = $(`[data-scroll="${sec}"] .shot`);
+  if (shot) { $$('.pin', shot).forEach((p) => p.remove());
+    list.forEach((p, i) => { if (p.shot !== file) return; const b = document.createElement('button'); b.type = 'button'; b.className = 'pin'; b.style.left = p.x + '%'; b.style.top = p.y + '%';
+      b.innerHTML = `<span>${i + 1}</span>`; b.setAttribute('aria-label', `Pin ${i + 1}`); b.onclick = (e) => { e.stopPropagation(); $(`#pin-${sec}-${i}`)?.focus(); }; shot.appendChild(b); }); }
+  const label = (f) => (SHOTS[sec].find((x) => x[1] === f) || [f])[0];
+  $(`[data-pins="${sec}"]`).innerHTML = list.map((p, i) => `<li><span class="tag">${i + 1}</span><label class="sr" for="pin-${sec}-${i}">Note for pin ${i + 1}</label>
+    <textarea id="pin-${sec}-${i}" data-pin="${sec}:${i}" placeholder="Note for pin ${i + 1} (${esc(label(p.shot))})">${esc(p.note || '')}</textarea><button class="x" type="button" data-unpin="${sec}:${i}" aria-label="Remove pin ${i + 1}">×</button></li>`).join('');
+}
+document.addEventListener('click', (e) => {
+  const v = e.target.closest('[data-view]'); if (v) return showShot(v.dataset.sec, +v.dataset.view);
+  const z = e.target.closest('[data-zoom]'); if (z) { const sec = z.dataset.zoom; $('#lb img').src = `shots/${SHOTS[sec][view[sec] || 0][1]}.jpg`; $('#lb').classList.add('open'); $('#lb button').focus(); return; }
+  const u = e.target.closest('[data-unpin]'); if (u) { const [sec, i] = u.dataset.unpin.split(':'); pinsFor(sec).splice(+i, 1); drawPins(sec); save(); return; }
+  const sh = e.target.closest('.shot'); if (sh && !e.target.closest('.pin')) {
+    const r = sh.getBoundingClientRect(), sec = sh.dataset.sec;
+    pinsFor(sec).push({ shot: sh.dataset.shot, x: +((e.clientX - r.left) / r.width * 100).toFixed(1), y: +((e.clientY - r.top) / r.height * 100).toFixed(1), note: '' });
+    drawPins(sec); save(); const list = pinsFor(sec); $(`#pin-${sec}-${list.length - 1}`)?.focus({ preventScroll: true });
+  }
+});
+$('#lb').onclick = (e) => { if (e.target.tagName !== 'IMG') $('#lb').classList.remove('open'); };
+addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#lb').classList.remove('open'); });
+Object.keys(SHOTS).forEach((sec) => showShot(sec, 0));
+
+// ---------------------------------------------------------------- fields
+function restore() {
+  $$('[data-k]').forEach((el) => {
+    const v = state[el.dataset.k];
+    if (v === undefined) return;
+    if (el.type === 'radio') el.checked = el.value === v;
+    else if (el.dataset.multi !== undefined) el.checked = Array.isArray(v) && v.includes(el.value);
+    else el.value = v;
+  });
+}
+document.addEventListener('input', (e) => {
+  const el = e.target;
+  if (el.dataset.pin) { const [sec, i] = el.dataset.pin.split(':'); pinsFor(sec)[+i].note = el.value; return save(); }
+  if (!el.dataset.k) return;
+  if (el.dataset.multi !== undefined) state[el.dataset.k] = $$(`[data-k="${el.dataset.k}"]`).filter((x) => x.checked).map((x) => x.value);
+  else if (el.type === 'radio') { if (el.checked) state[el.dataset.k] = el.value; }
+  else state[el.dataset.k] = el.value;
+  save();
+});
+document.addEventListener('change', (e) => { if (e.target.type === 'radio' || e.target.type === 'checkbox') e.target.dispatchEvent(new Event('input', { bubbles: true })); });
+
+function touched(s) {
+  const keys = Object.keys(state).filter((k) => k.startsWith(s.id + '__'));
+  const changed = keys.some((k) => { const el = $(`[data-k="${k}"]`); const v = state[k]; if (Array.isArray(v)) return v.length; return v && (!el?.dataset.orig || el.dataset.orig !== v); });
+  return changed || (state.pins[s.id] || []).length > 0 || (s.look && (state.pins.look || []).length > 0);
+}
+function progress() {
+  const done = S.filter(touched).length;
+  $('#bar').style.width = (done / S.length * 100) + '%';
+  $('.prog').setAttribute('aria-valuenow', Math.round(done / S.length * 100));
+  $('#prog-label').textContent = `${done} of ${S.length}`;
+  S.forEach((s) => { const t = touched(s); $(`#n-${s.id}`).classList.toggle('done', t); $(`[data-toc="${s.id}"]`).classList.toggle('done', t); $(`#n-${s.id}`).textContent = t ? '✓' : S.indexOf(s) + 1; });
+  return done;
+}
+
+// ---------------------------------------------------------------- compile + send
+const REACT = { love: 'Love it 😍', good: 'Good 🙂', work: 'Needs work 🤔', no: "Don't like 👎" };
+function compile() {
+  const out = {};
+  S.forEach((s, i) => {
+    const lines = [], g = (x) => state[`${s.id}__${x}`];
+    if (g('reaction')) lines.push('Reaction: ' + REACT[g('reaction')]);
+    if (g('like')) lines.push('Likes: ' + g('like'));
+    if (g('change')) lines.push('Change/remove: ' + g('change'));
+    (s.q || []).forEach(([qk, label]) => { const v = g(qk); if (v && (!Array.isArray(v) || v.length)) lines.push(`${label} → ${Array.isArray(v) ? v.join(', ') : v}`); });
+    (s.rewrite || []).forEach(([label, cur], j) => { const v = g('rw' + j); if (v && v.trim() !== cur.trim()) lines.push(`REWRITE "${label}":\n   was: ${cur}\n   NEW: ${v}`); });
+    const secs = s.look ? ['look'] : [s.id];
+    secs.forEach((sec) => (state.pins[sec] || []).forEach((p, j) => { if (p.note || true) lines.push(`📍 Pin ${j + 1} on "${(SHOTS[sec].find((x) => x[1] === p.shot) || [p.shot])[0]}" (${p.x}% across, ${p.y}% down): ${p.note || '(no note)'}  → ${location.href.replace(/[#?].*$/, '')}shots/${p.shot}.jpg`); }));
+    if (lines.length) out[`${String(i + 1).padStart(2, '0')}. ${s.title}`] = lines.join('\n');
+  });
+  return out;
+}
+function textReport() {
+  const c = compile();
+  return `HBDYWI beta feedback\nFrom: ${state.reviewer_name || ''} <${state.reviewer_email || ''}>\nDate: ${new Date().toLocaleString()}\n\n` + Object.entries(c).map(([k, v]) => `== ${k} ==\n${v}`).join('\n\n');
+}
+$('#submit').onclick = async (e) => {
+  const btn = e.currentTarget, msg = $('#send-msg'), body = compile();
+  if (!Object.keys(body).length) { msg.className = 'msg err'; msg.textContent = 'Add at least one reaction, comment or pin first.'; return; }
+  btn.setAttribute('aria-busy', 'true'); btn.textContent = 'Sending…';
+  const done = progress();
+  const payload = { _subject: `HBDYWI beta feedback from ${state.reviewer_name || 'reviewer'} (${done}/${S.length} sections)`, _template: 'box', _captcha: 'false',
+    Reviewer: state.reviewer_name || '(no name)', 'Reviewer email': state.reviewer_email || '(none)', 'Sections reviewed': `${done} of ${S.length}`,
+    'Pins dropped': Object.values(state.pins).reduce((a, l) => a + l.length, 0), ...body, 'Full report (plain text)': textReport() };
+  if (state.reviewer_email && /@/.test(state.reviewer_email)) payload._replyto = state.reviewer_email;
+  try {
+    const r = await fetch('https://formsubmit.co/ajax/' + SEND_TO, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok || String(d.success) === 'false') throw new Error(d.message || 'send failed');
+    msg.className = 'msg ok'; msg.textContent = 'Sent. Thank you! 🌸 Your answers stay saved here, so you can add more and send again anytime.';
+    state.sent_at = new Date().toISOString(); save();
+  } catch (err) {
+    msg.className = 'msg err';
+    msg.innerHTML = `We couldn't send it just now. Please tap <a href="#" id="dl2">download a copy</a> and email it to us, or <a href="mailto:${SEND_TO}?subject=${encodeURIComponent('HBDYWI beta feedback')}&body=${encodeURIComponent(textReport().slice(0, 1800))}">open it in your email app</a>.`;
+    $('#dl2').onclick = (ev) => { ev.preventDefault(); download(); };
+  }
+  btn.removeAttribute('aria-busy'); btn.textContent = 'Send my feedback';
+};
+function download() {
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([textReport()], { type: 'text/plain' })), download: 'HBDYWI-beta-feedback.txt' }); a.click();
+}
+$('#download').onclick = (e) => { e.preventDefault(); download(); };
+$('#clear').onclick = (e) => { e.preventDefault(); if (confirm('Clear all your answers and pins on this device?')) { localStorage.removeItem(KEY); location.reload(); } };
+
+restore(); progress();
+})();
+</script>
+</body>
+</html>
